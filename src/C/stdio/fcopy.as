@@ -1,6 +1,6 @@
 package C.stdio
 {
-    
+
     import C.stdio.*; // FILE, fopen, fclose, fread, fwrite
 
     import flash.utils.*; // ByteArray
@@ -42,7 +42,7 @@ package C.stdio
      * @param destination the filepath to copy to.
      * @param buffer how mnay bytes to copy per cycle (default is 8192, eg. BUFSIZ)
      * @return Upon successful completion, <code>fcopy()</code> should return the number of bytes copied.
-     * Otherwise, if a vopy error occurs, the return value should be less than zero, and errno shall be set to indicate the error.
+     * Otherwise, if a copy error occurs, the return value should be less than zero, and errno shall be set to indicate the error.
      * 
      * @langversion 3.0
      * @playerversion AVM 0.4
