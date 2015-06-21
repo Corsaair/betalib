@@ -9,6 +9,13 @@ package C.sys.socket
      * This function handle reassembly buffer for you.
      * </p>
      * 
+     * <p>
+     * Because we receive data into a <code>ByteArray</code>
+     * we are limited to <code>4 GB</code>.
+     * To receive bigger files we could modifiy this function
+     * to save the bytes into a file for example.
+     * </p>
+     * 
      * @example Usage
      * <listing>
      * // ...
