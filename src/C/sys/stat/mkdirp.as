@@ -1,37 +1,50 @@
 package C.sys.stat
 {
 
-    /* Note:
-       mkdir() creates directoy
-       but can not creates directory tree
-
-       the command line "$ mkdir -p" allows that
-       so here a small util function to emulate that
-       behaviour
-
-       usage:
-        var result:int = mkdirp( "hello/the/big/world/", -1 );
-        trace( "result = " + result );
-        if( result != 0 )
-        {
-            var e:* = new CError( "", errno );
-            trace( e );
-        }
-    */
-
     import C.errno.*;
     import C.sys.stat.*; // mkdir
     import C.unistd.*;   // access, F_OK
 
     /**
-     * mkdirp - create a new directory and intermediate directories as required
-     *
+     * Create a new directory and intermediate directories as required.
+     * 
+     * <p>
+     * Replicates the command line behaviour <code>mkdir -p</code> which
+     * allow to create a directory tree.
+     * </p>
+     * 
+     * @example Usage
+     * <listing>
+     *  /&#42; Create the following directory tree
+     *  .
+     *  └── hello
+     *      └── the
+     *          └── big
+     *              └── world
+     *  &#42;/
+     * var result:int = mkdirp( "hello/the/big/world/" );
+     * trace( "result = " + result );
+     * if( result != 0 )
+     * {
+     *     trace( new CError( "", errno ) );
+     * }
+     * </listing>
+     * 
      * @param path The pathname of the directory tree to be created.
      * @param mode The file permission bits (optional).
      * @return Upon successful completion, this function shall return <code>0</code>.
      * Otherwise, this function shall return <code>-1</code> and set <code>errno</code>
      * to indicate the error.
      * If <code>-1</code> is returned, last directory in the path shall not be created.
+     * 
+     * @langversion 3.0
+     * @playerversion AVM 0.4
+     * @playerversion POSIX +
+     * 
+     * @see C.sys.stat#mkdir mkdir()
+     * @see http://pubs.opengroup.org/onlinepubs/9699919799/utilities/mkdir.html The mkdir utility
+     * http://www.unix.com/man-page/opensolaris/3gen/mkdirp/ man page for mkdirp (Open Solaris)
+     * @see NON STANDARD EXTENSION
      */
     public function mkdirp( path:String, mode:int = -1 ):int
     {
