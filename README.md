@@ -79,3 +79,61 @@ our AS3 function signature
 ```AS3
 public function mkdir(path:String, mode:int = -1):int;
 ```
+
+From time to time I will encounter a C utility function that did not end up being
+officially part of either the ANSI C library and/or the POSIX library, for example
+`mkdirp()`.
+
+Here `mkdirp()` has the same behaviour of `mkdir()` with the welcomed difference
+that provided a path it will create the non-existing elements, it is a basic feature
+but quite useful, the code involved rely only on the standard C libraries so it is
+something worth considering to add directly into the runtime.
+
+Simply put, the few lines of AS3 source code, add fucntionality and no dependency,
+and can help AS3 dev to write faster code.
+
+That would be a good candidate to add.
+
+Note well, it would be a completely different talk if someone were to ask to add something
+like `mysql_connect()` which add a heavy dependency at the C source code level.
+
+
+#### An example with AVMGLUE
+
+AVMGLUE is the library that take the responsibility to add implementatiosn fo the Flash API into Redtamarin.
+
+This Flash API is huge to implement and off course not everythign is ready yet.
+
+The betalib could then be used to incubate proposed implementations, for ex someone could
+propose a `flash.net.Socket` or other class part of the Flash API and not avaialble yet.
+
+
+Some Advices
+------------
+
+I understand that working on Redtamarin can be frustrating if the one class you need is missing,
+and this **betalib** is here to fix that, even if you do not want to compile the original
+Redtamarin soruce code (because it can be complicated, because it's C++, etc...) it allows you
+to contribute goold old ActionScript 3.0 source code.
+
+By extension, it alow you also to contribute to any other parts like the `shell` package or the `C` package.
+
+But I will insist that I will review this source code like a hawk so please follow those advices
+  - communicate, don't go writing thousands of line of code in your corner and then send a big patch
+  - don't change the nature of Redtamarin, for example the "because I felt redtamarin should be like node.js I made everything async but now everyone else code need to be run async ..." will not be well received
+  - do clean code and clean documentation  
+    see: [specific asdoc for Redtamarin](https://github.com/Corsaair/redtamarin/wiki/specific-asdoc-for-Redtamarin)
+  - remember that Redtamarin is crossplatform (Windows, Macintosh, Linux)
+  unless it is really impossible try to contribute code that can work everywhere
+  - this is not an excuse to add anything and everything
+
+
+How to Contribute
+-----------------
+
+  1. Fork this repository
+  2. add your code in the src/ , ideally only 1 function or 1 class
+  3. Raise a pull request
+  4. Discuss in the pull request
+  5. If/Once merged enjoy to have contributed to Redtamarin :)
+  
