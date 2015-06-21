@@ -33,7 +33,7 @@ package C.sys.socket
      * @param socket socket descriptor.
      * @param bytes ByteArray to store the received data.
      * @param buffer how mnay bytes to copy per cycle (default is 8192)
-     * @param flags 
+     * @param flags socket flags (default is 0 or none)
      * @return Upon successful completion, <code>recvall()</code> should return the number of bytes received.
      * Otherwise, if an error occurs, the return value should be less than zero, and errno shall be set to indicate the error.
      * 
@@ -57,8 +57,8 @@ package C.sys.socket
             n = recv( socket, b, buffer, flags );
             if( n < 0 )
             {
-            	b.clear();
-            	return n; //failure
+                b.clear();
+                return n; //failure
             }
 
             bytes.writeBytes( b );
@@ -67,22 +67,22 @@ package C.sys.socket
                defining a buffer does not guarantee this one will be full all the time
                here an output
                --------
-			   n = 1448
-			   n = 1448
-			   n = 2896
-			   n = 1448
-			   n = 1448
-			   n = 1448
-			   n = 2896
-			   n = 1448
-			   n = 1448
-			   n = 1448
-			   n = 1448
-			   n = 1448
-			   n = 1448
-			   n = 2896
-			   n = 1534
-			   n = 0
+               n = 1448
+               n = 1448
+               n = 2896
+               n = 1448
+               n = 1448
+               n = 1448
+               n = 2896
+               n = 1448
+               n = 1448
+               n = 1448
+               n = 1448
+               n = 1448
+               n = 1448
+               n = 2896
+               n = 1534
+               n = 0
                --------
                even with a defualt buffer of 8192, this parciular connection
                use a max buffer of 2896, sometimes less 1448, etc.
