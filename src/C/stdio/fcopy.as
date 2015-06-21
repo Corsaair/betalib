@@ -1,7 +1,6 @@
 package C.stdio
 {
-
-    import C.errno.*; // errno, CError
+    
     import C.stdio.*; // FILE, fopen, fclose, fread, fwrite
 
     import flash.utils.*; // ByteArray
