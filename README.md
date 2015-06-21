@@ -113,17 +113,22 @@ Some Advices
 
 I understand that working on Redtamarin can be frustrating if the one class you need is missing,
 and this **betalib** is here to fix that, even if you do not want to compile the original
-Redtamarin soruce code (because it can be complicated, because it's C++, etc...) it allows you
-to contribute goold old ActionScript 3.0 source code.
+Redtamarin source code (because it can be complicated, because it's C++, etc...) it allows you
+to contribute good old ActionScript 3.0 source code.
 
 By extension, it alow you also to contribute to any other parts like the `shell` package or the `C` package.
 
 But I will insist that I will review this source code like a hawk so please follow those advices
   - communicate, don't go writing thousands of line of code in your corner and then send a big patch
-  - don't change the nature of Redtamarin, for example the "because I felt redtamarin should be like node.js I made everything async but now everyone else code need to be run async ..." will not be well received
+  - don't change the nature of Redtamarin  
+  for example the
+  > because I felt redtamarin should be like node.js
+  > I made everything async
+  > but now everyone else code need to be run async ...
+  will not be well received
   - do clean code and clean documentation  
     see: [specific asdoc for Redtamarin](https://github.com/Corsaair/redtamarin/wiki/specific-asdoc-for-Redtamarin)
-  - remember that Redtamarin is crossplatform (Windows, Macintosh, Linux)
+  - remember that Redtamarin is crossplatform (Windows, Macintosh, Linux)  
   unless it is really impossible try to contribute code that can work everywhere
   - this is not an excuse to add anything and everything
 
@@ -136,4 +141,3 @@ How to Contribute
   3. Raise a pull request
   4. Discuss in the pull request
   5. If/Once merged enjoy to have contributed to Redtamarin :)
-  
