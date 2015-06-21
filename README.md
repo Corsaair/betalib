@@ -121,10 +121,10 @@ By extension, it alow you also to contribute to any other parts like the `shell`
 But I will insist that I will review this source code like a hawk so please follow those advices
   - communicate, don't go writing thousands of line of code in your corner and then send a big patch
   - don't change the nature of Redtamarin  
-  for example the
-  > because I felt redtamarin should be like node.js
-  > I made everything async
-  > but now everyone else code need to be run async ...
+  for example the  
+      > because I felt redtamarin should be like node.js
+      > I made everything async
+      > but now everyone else code need to be run async ...
   will not be well received
   - do clean code and clean documentation  
     see: [specific asdoc for Redtamarin](https://github.com/Corsaair/redtamarin/wiki/specific-asdoc-for-Redtamarin)
