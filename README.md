@@ -6,19 +6,13 @@ embedded in future releases of the redtamarin binaries.
 
 The following packages are concerned
 ```tree
-avm2
+flash   ==> AVMGLUE (Flash/AIR API)
   |_ ...
 
-avmplus
+C       ==> CLIB (C standard library)
   |_ ...
 
-flash
-  |_ ...
-
-C
-  |_ ...
-
-shell
+shell   ==> RNL (RedTamarin Native Library)
   |_ ...
 
 ```
