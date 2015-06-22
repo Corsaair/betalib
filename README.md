@@ -52,6 +52,10 @@ and correct all code dependant on this fucntion.
 
 And it could also break code.
 
+Here with `recvall()`, because the definition already exists in redtamarin,
+we are forced to renamed the function to `recvall2()` to not only be able
+to compile it but also use it in our code.
+
 
 #### An example of extension
 
