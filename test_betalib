@@ -1,0 +1,13 @@
+#!/usr/bin/as3shebang -- 
+
+import shell.*;
+
+var betalib:* = Domain.currentDomain.load( "betalib.abc" );
+trace( betalib + " loaded" );
+
+import C.unistd.*; // which
+
+trace( "which bash = " + which("bash") );
+trace( "which svn = " + which("svn", true) );
+trace( "which as3shebang = " + which("as3shebang") );
+trace( "which java = " + which("java", true) );

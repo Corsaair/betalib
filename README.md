@@ -53,7 +53,7 @@ and correct all code dependant on this fucntion.
 And it could also break code.
 
 Here with `recvall()`, because the definition already exists in redtamarin,
-we are forced to renamed the function to `recvall2()` to not only be able
+we are forced to rename the function to `recvall2()` to not only be able
 to compile it but also use it in our code.
 
 
@@ -104,6 +104,24 @@ This Flash API is huge to implement and off course not everythign is ready yet.
 
 The betalib could then be used to incubate proposed implementations, for ex someone could
 propose a `flash.net.Socket` or other class part of the Flash API and not avaialble yet.
+
+Quick Test
+----------
+
+Create a symlink of redbean at the root of the project  
+`$ ln -s /sdk/redtamarin/bin/redbean redbean`
+
+Build the library  
+`./redbean`
+
+Run the test with as3shebang  
+`./test_betalib`
+
+test_betalib
+```as3
+
+
+```
 
 
 Some Advices
