@@ -1,0 +1,11 @@
+import redbean.*;
+import shell.FileSystem;
+
+compile( "src/betalib.as" );
+
+if( FileSystem.exists( "betalib.abc" ) )
+{
+	FileSystem.removeFile( "betalib.abc" );
+}
+
+FileSystem.move( "src/betalib.abc", "betalib.abc" );
