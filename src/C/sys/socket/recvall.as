@@ -1,7 +1,8 @@
 package C.sys.socket
 {
 
-
+    import flash.utils.*;
+    
     /**
      * Receive the full message on a socket.
      *
@@ -51,7 +52,7 @@ package C.sys.socket
      * @see http://beej.us/guide/bgnet/output/html/singlepage/bgnet.html#sendall
      * @see NON STANDARD EXTENSION
      */
-    public function recvall( socket:int, bytes:ByteArray, buffer:uint = 8192, flags:int = 0 ):Number
+    public function recvall2( socket:int, bytes:ByteArray, buffer:uint = 8192, flags:int = 0 ):Number
     {
         var total:Number = 0; // how many bytes we received
         var n:int;
